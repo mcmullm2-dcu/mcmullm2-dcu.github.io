@@ -1,2 +1,2 @@
-# mcmullm2-dcu.github.io
-Michael McMullin's Coding Portfolio
+# Michael McMullin's Coding Portfolio
+Hello! This is the new home for my coding projects. More details to follow...
