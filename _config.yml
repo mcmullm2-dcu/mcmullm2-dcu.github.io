@@ -13,9 +13,9 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Michael McMullin == Portfolio
+title: Michael McMullin
 description: >- # this means to ignore newlines until "baseurl:"
-  Coming soon, a bunch of coding projects, woo-hoo!
+  Blog and coding portfolio
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mcmullm2-dcu.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  mcmullm2-dcu

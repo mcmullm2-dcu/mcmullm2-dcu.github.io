@@ -1,18 +1,17 @@
 ---
 layout: page
-title: About
+title: About Me
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Hi! My name is Michael McMullin, and I'm starting this blog to share some coding
+related thoughts and projects I've worked on.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+My programming journey started in the early 1980's on a borrowed
+[Sinclair ZX81](https://en.wikipedia.org/wiki/ZX81), and these days I write
+software for Ireland's largest digital print provider to help automate and
+streamline production. I've also gone [back to college](https://www.dcu.ie/) to
+learn more about software development. My original degree is in Visual
+Communications.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+So I hope you find something of interest in here. Thanks for visiting!
