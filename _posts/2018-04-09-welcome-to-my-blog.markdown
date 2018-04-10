@@ -7,7 +7,7 @@ categories: general
 Welcome to my new blog!
 
 For a general introduction to who I am and what I do, please visit the
-About Me page.
+[About Me](/about) page.
 
 As for this blog, well it's difficult to settle on a theme for a new blog. I've
 got a few exams coming up next month, so I guess the first few posts will be
