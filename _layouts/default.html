@@ -6,7 +6,13 @@
   <body>
     {%- include header.html -%}
 
-    <div class="container bg-light pt-5 mt-3">
+    {%- if page.jumbo -%}
+      {% assign top_margin_style = '' %}
+    {% else %}
+      {% assign top_margin_style = 'pt-5 mt-3' %}
+    {%- endif -%}
+
+    <div class="container bg-light {{ top_margin_style }}">
       <main class="page-content" aria-label="Content">
         <div class="wrapper">
           {{ content }}
