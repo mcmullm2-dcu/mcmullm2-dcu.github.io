@@ -5,3 +5,17 @@
 .navbar-brand {
     font-weight: 900;
 }
+.full-height {
+    height: 100vh;
+}
+.svg-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    fill: $gray-300;
+    vertical-align: text-top;
+    transition: all 0.2s;
+}
+.svg-icon:hover {
+    fill: $white;
+}

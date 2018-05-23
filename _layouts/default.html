@@ -9,18 +9,19 @@
     {%- if page.jumbo -%}
       {% assign top_margin_style = '' %}
     {% else %}
-      {% assign top_margin_style = 'pt-5 mt-3' %}
+      {% assign top_margin_style = ' pt-5 mt-3' %}
     {%- endif -%}
 
-    <div class="container bg-light {{ top_margin_style }}">
+    <div class="container bg-light{{ top_margin_style }}">
       <main class="page-content" aria-label="Content">
         <div class="wrapper">
           {{ content }}
         </div>
       </main>
 
-      {%- include footer.html -%}
     </div>
+
+    {%- include footer.html -%}
   </body>
 
 </html>
