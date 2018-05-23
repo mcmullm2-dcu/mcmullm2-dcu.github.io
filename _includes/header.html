@@ -1,5 +1,10 @@
 <header>
-  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white shadow">
+  {%- if page.jumbo -%}
+    {% assign nav_style = 'navbar-light' %}
+  {% else %}
+     {% assign nav_style = 'navbar-light bg-white shadow' %}
+  {%- endif -%}
+  <nav class="navbar fixed-top navbar-expand-lg {{ nav_style }}">
     <div class="container">
      {%- assign default_paths = site.pages | map: "path" -%}
      {%- assign page_paths = site.header_pages | default: default_paths -%}
@@ -22,4 +27,8 @@
       </div>
     </div>
   </nav>
+  {%- if page.jumbo -%}
+    {% assign header_file = 'jumbo/' | append: page.jumbo | append: '.html' %}
+    {% include {{header_file}} %}
+  {%- endif -%}
 </header>
