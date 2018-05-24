@@ -1,4 +1,17 @@
 /* Theme customisations */
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin-bottom: 6em; // Allow for sticky footer. Fixed height-ish for now.
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
 .navbar-nav {
     text-transform: uppercase;
 }
