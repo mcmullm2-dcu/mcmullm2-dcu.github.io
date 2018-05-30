@@ -33,3 +33,112 @@ footer {
 .svg-icon:hover {
     fill: $white;
 }
+
+/* SVG/D3 bar charts */
+.popover{
+    color:#333
+}
+.svg-bg-gray-base{
+    fill:#000
+}
+.svg-bg-gray-base:hover{
+    fill:black
+}
+.svg-bg-gray-darker{
+    fill:#222
+}
+.svg-bg-gray-darker:hover{
+    fill:#161616
+}
+.svg-bg-gray-dark{
+    fill:#333
+}
+.svg-bg-gray-dark:hover{
+    fill:#262626
+}
+.svg-bg-gray{
+    fill:#555
+}
+.svg-bg-gray:hover{
+    fill:#494949
+}
+.svg-bg-gray-light{
+    fill:#999
+}
+.svg-bg-gray-light:hover{
+    fill:#8c8c8c
+}
+.svg-bg-gray-lighter{
+    fill:#e6e6e6
+}
+.svg-bg-gray-lighter:hover{
+    fill:#d9d9d9
+}
+.svg-bg-primary{
+    fill:#2780e3
+}
+.svg-bg-primary:hover{
+    fill:#1c73d5
+}
+.svg-bg-success{
+    fill:#3fb618
+}
+.svg-bg-success:hover{
+    fill:#379f15
+}
+.svg-bg-info{
+    fill:#9954bb
+}
+.svg-bg-info:hover{
+    fill:#8d46b0
+}
+.svg-bg-warning{
+    fill:#ff7518
+}
+.svg-bg-warning:hover{
+    fill:#fe6600
+}
+.svg-bg-danger{
+    fill:#ff0039
+}
+.svg-bg-danger:hover{
+    fill:#e60033
+}
+.svg-barchart text{
+    fill:black;
+    font:10px sans-serif;
+    text-anchor:end
+}
+.svg-barchart .axis text{
+    font:10px sans-serif
+}
+.svg-barchart .axis path,.svg-barchart .axis line{
+    fill:none;
+    stroke:#000;
+    shape-rendering:crispEdges
+}
+.svg-barchart .line-primary{
+    stroke:#2780e3;
+    fill:none;
+    stroke-width:2px
+}
+.svg-barchart .line-success{
+    stroke:#3fb618;
+    fill:none;
+    stroke-width:2px
+}
+.svg-barchart .line-info{
+    stroke:#9954bb;
+    fill:none;
+    stroke-width:2px
+}
+.svg-barchart .line-warning{
+    stroke:#ff7518;
+    fill:none;
+    stroke-width:2px
+}
+.svg-barchart .line-danger{
+    stroke:#ff0039;
+    fill:none;
+    stroke-width:2px
+}

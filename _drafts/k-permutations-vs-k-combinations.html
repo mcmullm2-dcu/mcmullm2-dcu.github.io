@@ -1,0 +1,111 @@
+---
+layout: post
+title: k-permutations vs k-combinations
+tags: [algorithms,optimisation]
+includes: [mathjax]
+---
+<p>Sometimes, optimising code for performance seems unneccessary. Have you ever
+    thrown together a utility to process thousands of files with the intention
+    of leaving it to run overnight? I've written a few of these over the years,
+    and generally they're just throwaway programs to do a bit of gruntwork as
+    part of a larger project. Occassionally though, they take longer than
+    expected.</p>
+
+<p>A few years ago, we were developing a ‘print-on-demand’ portal for a large
+    national retailer, and needed thousands of thumbnail images of greeting
+    cards. These featured different colours, backgrounds and photographs to suit
+    a wide range of categories. Here are a few examples:</p>
+
+<div class="row">
+    <div class="col-xs-4">
+        <img src="{{ '/assets/img/pod/cardsample1.png' | relative_url }}" alt="Sample of a birthday card for a young boy" class="img-fluid">
+    </div>
+    <div class="col-xs-4">
+        <img src="{{ '/assets/img/pod/cardsample2.png' | relative_url }}" alt="Sample of a fathers's day card" class="img-fluid">
+    </div>
+    <div class="col-xs-4">
+        <img src="{{ '/assets/img/pod/cardsample3.png' | relative_url }}" alt="Sample of a birthday card for a teenage girl" class="img-fluid">
+    </div>
+</div>
+
+<p>Our small team couldn’t possibly create the thousands of themes that
+    established vendors were offering, and the platform we had to work with made
+    it unfeasable to integrate with licensed content. So we decided to cheat a
+    little.</p>
+
+<p>For each size card we offered, we created a small number of blank templates:
+    1 photo, 1 photo with text, 2 photos with text, and so on. Then we intended
+    to create a bunch of thumbnail images for different occasions (birthday,
+    wedding, etc), and point them all to the same template. Here’s an example of
+    a template consisting of one photo with text underneath, reused in a few
+    different categories:</p>
+
+<div class="row">
+    <div class="col-xs-12">
+        <img src="{{ '/assets/img/pod/greetingcardtemplate.jpg' | relative_url }}"
+            alt="Sample of several greeting card thumbnails pointing to a single template" class="img-fluid">
+    </div>
+</div>
+
+<p>From the end-user’s perspective, there was an illusion of choice, but
+    effectively they were all ordering the same product. It was a good way of
+    measuring which categories were popular, which in turn would allow us to
+    prioritise where to add unique templates over time.</p>
+    
+<p>Although there was a little bit of setting up, it was manageable. I created a
+    folder for each category, and added a few examples of suitable stock
+    photography into each one. Next, I created a console app in C#, which
+    defined a few colour palettes, text, etc., then roughly followed this
+    pattern:</p>
+
+{% highlight c# %}
+foreach(template in templates)
+{
+  foreach(category in categories)
+  {
+    foreach(palette in palettes)
+    {
+      // photoCombosRemaining is true for as long as each folder of photos can
+      // still create a unique set of images to load into each template.
+      while(photoCombosRemaining)
+      {
+        loadUniquePhotoCombo();
+        generateThumbnail();
+      }
+    }
+  }
+}
+{% endhighlight %}
+
+<p>I left it running overnight as a test, and it quickly became apparent that
+    optimisation was going to be more important than I initially thought. For a
+    start, every unique combination of photographs and colour palettes grew to
+    an unmanageable number, which would have taken weeks or months to get
+    through. Secondly, it was obvious from the initial batch that a large
+    percentage of thumbnails would be unusable, mainly due to landscape photos
+    being placed into portrait placeholders (and vice versa). Editing such a
+    large number would be completely unfeasible.</p>
+
+<h2>Understanding the problem</h2>
+<p>Before optimising anything, it helps to understand what’s going on. What
+    we’re dealing with in the outer loop is defining how many spaces are
+    available in a template for photographs to be placed. Let’s call that k.</p>
+
+<p>The innermost loop, which chooses photos to place inside each slot, defines
+    how many photos we have to choose from. We’ll call this number n.</p>
+    
+<p>So we have a template with k slots to add photos to, and then a larger number
+    of photos (n) to choose from to fill those slots. Each selection is unique,
+    but the order of each selection matters. It is a problem in mathematics
+    known as k-permutations.</p>
+    
+<p>The number of permutations can be calculated easily enough. The first item
+    can be chosen from all n items. Next, choose from the remaining (n-1) items,
+    and so on, until all k slots are filled (n-k+1):</p>
+
+
+    $$\frac{n!}{(n-k)!}$$
+
+Woohoo!
+
+$$|\psi\rangle$$
