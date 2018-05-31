@@ -36,73 +36,73 @@ footer {
 
 /* SVG/D3 bar charts */
 .popover{
-    color:#333
+    color: $gray-900;
 }
 .svg-bg-gray-base{
-    fill:#000
+    fill: $black;
 }
 .svg-bg-gray-base:hover{
-    fill:black
+    fill: $black;
 }
 .svg-bg-gray-darker{
-    fill:#222
+    fill: $gray-900;
 }
 .svg-bg-gray-darker:hover{
-    fill:#161616
+    fill: $gray-800;
 }
 .svg-bg-gray-dark{
-    fill:#333
+    fill: $gray-700;
 }
 .svg-bg-gray-dark:hover{
-    fill:#262626
+    fill: $gray-800;
 }
 .svg-bg-gray{
-    fill:#555
+    fill: $gray-600;
 }
 .svg-bg-gray:hover{
-    fill:#494949
+    fill: $gray-700;
 }
 .svg-bg-gray-light{
-    fill:#999
+    fill: $gray-300;
 }
 .svg-bg-gray-light:hover{
-    fill:#8c8c8c
+    fill: $gray-400;
 }
 .svg-bg-gray-lighter{
-    fill:#e6e6e6
+    fill: $gray-200;
 }
 .svg-bg-gray-lighter:hover{
-    fill:#d9d9d9
+    fill: $gray-300;
 }
 .svg-bg-primary{
-    fill:#2780e3
+    fill: $primary;
 }
 .svg-bg-primary:hover{
-    fill:#1c73d5
+    fill: darken($primary, 10%);
 }
 .svg-bg-success{
-    fill:#3fb618
+    fill: $success;
 }
 .svg-bg-success:hover{
-    fill:#379f15
+    fill: darken($success, 10%);
 }
 .svg-bg-info{
-    fill:#9954bb
+    fill: $info;
 }
 .svg-bg-info:hover{
-    fill:#8d46b0
+    fill: darken($info, 10%);
 }
 .svg-bg-warning{
-    fill:#ff7518
+    fill: $warning;
 }
 .svg-bg-warning:hover{
-    fill:#fe6600
+    fill: darken($warning, 10%);
 }
 .svg-bg-danger{
-    fill:#ff0039
+    fill: $danger;
 }
 .svg-bg-danger:hover{
-    fill:#e60033
+    fill: darken($danger, 10%);
 }
 .svg-barchart text{
     fill:black;
@@ -118,27 +118,27 @@ footer {
     shape-rendering:crispEdges
 }
 .svg-barchart .line-primary{
-    stroke:#2780e3;
+    stroke: $primary;
     fill:none;
     stroke-width:2px
 }
 .svg-barchart .line-success{
-    stroke:#3fb618;
+    stroke: $success;
     fill:none;
     stroke-width:2px
 }
 .svg-barchart .line-info{
-    stroke:#9954bb;
+    stroke: $info;
     fill:none;
     stroke-width:2px
 }
 .svg-barchart .line-warning{
-    stroke:#ff7518;
+    stroke: $warning;
     fill:none;
     stroke-width:2px
 }
 .svg-barchart .line-danger{
-    stroke:#ff0039;
+    stroke:$danger;
     fill:none;
     stroke-width:2px
 }
