@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Reflections on SDA Assignment 1
-tags: [sql,d3,data visualisation]
+tags: [sda,android,java,github]
 ---
 Our first assignment in SDA (Mobile Application Development) was to create
 a simple Android app that displayed a bit of text towards the top of the
